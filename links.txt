@@ -1,0 +1,4 @@
+moodle : https://im2ag-moodle.univ-grenoble-alpes.fr/course/index.php?categoryid=30
+TLI : https://iihm.imag.fr/blanch/M1/TLI/
+ADE : https://ade-uga-ro-vs.grenet.fr/direct/index.jsp?data=5e58d6dfb7fba2eadbc98b822b5605b3d40cfdde13ea08a911963978c47c0b05c7dbf50ac40cd943de2e6f7de7f963bed334c10559d5088c20ada3e85f74b6a618f9ce92d9857ec7783739e27d2592fdce5d016527fea8754e9b0d9404c94c20,1
+COO : https://coo.gricad-pages.univ-grenoble-alpes.fr/
