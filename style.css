@@ -1,62 +1,64 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: #080808;
     color: #fff;
 }
 
-#header{
+#header {
     height: 100vh;
     background: url(images/background_.png) no-repeat center center fixed;
     background-size: cover;
     background-position: right;
 }
 
-.container{
+.container {
     padding: 10px 10%;
 }
 
-#header .container nav{
-    top: 20px;
+#header .container nav {
+    top: 50%;
     right: 20px;
     position: absolute;
+    transform: translateY(-50%);
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.logo{
+.logo {
     width: 140px;
+    max-width: 100%;
 }
 
-#languages img{
+#languages img {
     width: 50px;
     height: 50px;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     position: relative;
 }
 
-nav ul li a::after{
+nav ul li a::after {
     content: '';
     width: 0%;
     height: 3px;
@@ -67,17 +69,19 @@ nav ul li a::after{
     transition: 0.5s;
 }
 
-nav ul li a:hover::after{
-   width: 100%;
+nav ul li a:hover::after {
+    width: 100%;
 }
 
-.header-text{
+.header-text {
     position: absolute;
-    bottom: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 30px;
 }
 
-.header-text h1{
+.header-text h1 {
     margin-top: 20px;
     font-size: 60px;
 }
@@ -87,18 +91,18 @@ nav ul li a:hover::after{
 }
 
 /* --- Services --- */
-#sevices{
+#services {
     padding: 30px 0;
 }
 
-.services-list{
+.services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
 
-.services-list div{
+.services-list div {
     background: #262626;
     padding: 40px;
     font-size: 13px;
@@ -107,20 +111,21 @@ nav ul li a:hover::after{
     transition: 0.5s;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
-.services-list div i{
+.services-list div i {
     font-size: 50px;
     margin-bottom: 30px;
 }
 
-.services-list div h2{
+.services-list div h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.services-list div a{
+.services-list div a {
     text-decoration: none;
     color: #fff;
     font-size: 12px;
@@ -128,27 +133,60 @@ nav ul li a:hover::after{
     display: inline-block;
 }
 
-.services-list div:hover{
+.services-list div:hover {
     background: #ff004f;
     transform: translateY(-10px);
 }
 
-#services {
-    cursor: pointer;
-}
-
 .clickable-div {
-    cursor: pointer; /* Change the cursor to indicate it's clickable */
-    width: 200px; /* Set a fixed width for the square divs */
-    height: 200px; /* Set a fixed height for the square divs */
-    margin: 10px; /* Add some margin for spacing */
-    display: inline-flex; /* Display divs inline */
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-    background-size: 100% 100%; /* Resize background image to cover the entire div */
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
 }
 
-.logo {
-    max-width: 100%;
-    height: 100%;
+@media screen and (max-width: 768px) {
+    /* Apply responsive styles for screens up to 768px wide */
+    .container {
+        padding: 10px 5%;
+    }
+
+    #header .container nav {
+        top: 20px;
+        right: 20px;
+    }
+
+    .header-text {
+        font-size: 24px;
+    }
+
+    .header-text h1 {
+        font-size: 48px;
+    }
+
+    .services-list {
+        display: flex; /* Use flex to center the column */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        margin-top: 50px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .services-list div {
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .services-list div i {
+        font-size: 40px;
+    }
+
+    .services-list div h2 {
+        font-size: 24px;
+    }
 }
